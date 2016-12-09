@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Search page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Buscar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Ecoprofesion</ion-label>
+      <ion-select [(ngModel)]="job">
+        <ion-option value="jardinero">Jardinero</ion-option>
+        <ion-option value="campesino">Campesino</ion-option>
+        <ion-option value="bioconstruccion">Bioconstruccion</ion-option>
+        <ion-option value="mantenimiento">Mantenimiento</ion-option>
+        <ion-option value="velador">Velador</ion-option>
+        <ion-option value="reutilizacion">Re-utilizacion de materiales</ion-option>
+        <ion-option value="construccion-muebles">Construccion de muebles reciclados</ion-option>
+        <ion-option value="obras">Obras publicas</ion-option>
+        <ion-option value="composta">Elaboracion de composta</ion-option>
+        <ion-option value="cultivos">Elavoracion de cultivos</ion-option>
+        <ion-option value="danza">Danza</ion-option>
+        <ion-option value="teatro">Teatro</ion-option>
+        <ion-option value="baile-salon">Baile de salon</ion-option>
+        <ion-option value="baile-callejero">Baile callejero</ion-option>
+        <ion-option value="pintura">Pintura</ion-option>
+        <ion-option value="graffiti">Graffiti</ion-option>
+        <ion-option value="urbanista">Urbanista</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button secondary (click)="search()">Buscar</button>
+
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-avatar item-left>
+        <img src="http://i.imgur.com/U00W6Si.png">
+      </ion-avatar>
+      <h2> {{ user.attributes.first_name }} </h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
